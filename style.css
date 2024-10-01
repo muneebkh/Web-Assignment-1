@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: rgba(200, 204, 203, 0.97);
+    border-bottom: 2px solid rgb(162, 157, 157);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.nav2-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.nav-items li {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-more a {
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(209, 51, 51);
+    font-weight: bold;
+}
+
+.p-blue a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.login-text a {
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+    margin-left: 1rem;
+}
+
+.nav-end {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav2 {
+    background-color: rgb(32, 32, 32);
+}
+
+.img-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-img img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .mobile-img img {
+        display: none;
+    }
+
+    .Menu {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(200, 204, 203, 0.97);
+        z-index: 999;
+        border: 1px solid #000;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .main-img img {
+        display: none;
+    }
+
+    .mobile-img img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .Menu {
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-end {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+}
